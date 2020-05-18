@@ -24,7 +24,7 @@ function make_pick(input_n,input_k){
             if (tempVector[i] == 1) check_st.push(arr[i]);
         }
         logic();
-        console.log(check_st);
+        // console.log(check_st);
         check_st.length = 0;
         // check++;
         
