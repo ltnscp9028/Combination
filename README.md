@@ -1,11 +1,11 @@
 js 순열, 조합 모듈입니다.
 =============
-> js에서 사용하기  
+> ### js에서 사용하기  
 >>```
 >>const combi = require('combination-js')
 >>```
 * * * 
-> 조합 사용하기  
+> ### 순열 사용하기  
 >    >next_permutation의 parameter는 array입니다.  
 >>```
 >>const arr = [1,2,3,4];
@@ -28,6 +28,7 @@ js 순열, 조합 모듈입니다.
 >>    
 >>}while(combi.next_permutation(arr));
 >* * *
+>>### 조합 사용하기  
 >>combination의 parameter는 n,k,arr,logic입니다.  
 >>nCk에서의 n,k와 arr(배열)입니다.  
 >>logic은 function이여야 합니다.
