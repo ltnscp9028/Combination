@@ -18,12 +18,16 @@ function make_pick(input_n,input_k){
     if(arguments.length==3){
         logic = () => {};
     }
+    // tempVector = JSON.parse(JSON.stringify(arr));
+    // console.log(tempVector);
+    v = JSON.parse(JSON.stringify(arr));
     make_pick(input_n,input_k);
     do {
         for (i = 0; i < tempVector.length; i++) {
-            if (tempVector[i] == 1) check_st.push(arr[i]);
+            if (tempVector[i] == 1) check_st.push(v[i]);
         }
         logic();
+        // console.log(tempVector);
         // console.log(check_st);
         check_st.length = 0;
         // check++;
