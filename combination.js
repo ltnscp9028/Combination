@@ -4,31 +4,41 @@ let check_st = [];
 let check=0;
 let n,k;
 
+function make_pick(input_n,input_k){
+    n=input_n;
+    k=input_k;
+      // for (i = 0; i < n; i++)v.push(i);
+      for (i = 0; i < k; i++)tempVector.push(1);
+      for (i = 0; i < n - k; i++)tempVector.push(0);
+      tempVector.sort();
+  }
 
-const make_pick = (input_n,input_k) => {
-  n=input_n;
-  k=input_k;
-    for (i = 0; i < n; i++)v.push(i);
-    for (i = 0; i < k; i++)tempVector.push(1);
-    for (i = 0; i < n - k; i++)tempVector.push(0);
-    tempVector.sort();
-}
 
-
-const combination = (input_n,input_k,logic) => {
-  make_pick(input_n,input_k);
+  function combination(input_n,input_k,arr,logic){
+    if(arguments.length==3){
+        logic = () => {};
+    }
+    make_pick(input_n,input_k);
     do {
         for (i = 0; i < tempVector.length; i++) {
-            if (tempVector[i] == 1) check_st.push(v[i]);
+            if (tempVector[i] == 1) check_st.push(arr[i]);
         }
         logic();
+        console.log(check_st);
         check_st.length = 0;
         // check++;
-        // console.log(tempVector);
+        
     } while (next_permutation());
   }
 
-const next_permutation = () => {
+
+  function next_permutation(vv,arr_length){
+    // console.log(arguments.length);
+    if(arguments.length==2){
+        n = arr_length;
+        tempVector = vv;
+    }
+
     var idx = -1;
     for(var i=0;i<n-1;i++)
         if(tempVector[i]<tempVector[i+1])idx=i;
@@ -46,7 +56,8 @@ const next_permutation = () => {
         tempVector[i] = tempVector[n - (i-idx)];
         tempVector[n - (i-idx)] = tmp;
     }
-    return 1;
+    // console.log(tempVector);
+    return tempVector;
 }
 
-module.exports = {combination};
+module.exports = {combination,next_permutation};
