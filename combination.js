@@ -36,11 +36,11 @@ function make_pick(input_n,input_k){
   }
 
 
-  function next_permutation(vv,arr_length){
+  function next_permutation(vv){
     // console.log(arguments.length);
-    if(arguments.length==2){
-        n = arr_length;
+    if(arguments.length==1){
         tempVector = vv;
+        n = tempVector.length;
     }
 
     var idx = -1;
