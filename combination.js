@@ -24,7 +24,7 @@ const combination = (input_n,input_k,logic) => {
         logic();
         check_st.length = 0;
         // check++;
-        console.log(tempVector);
+        // console.log(tempVector);
     } while (next_permutation());
   }
 
