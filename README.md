@@ -16,8 +16,8 @@
 >>```
 >* * *
 >>next_permutation의 중간 반환값은 다음 순열이 담긴 배열입니다.  
->>intermediate return value of next_permutation is Array containing the next permutation  
-> >next_permutation이 모두 끝나면 0을 반환합니다.  
+> >next_permutation이 모두 끝나면 0을 반환합니다. 
+>>intermediate return value of next_permutation is Array containing the next permutation   
 > >Return 0 when next_permatation is complete.
 > >>
 >>```
